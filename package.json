@@ -1,0 +1,23 @@
+{
+  "name": "smart-cloud",
+  "version": "0.0.0",
+  "description": "The Smart-Cloud is a physical cloud lamp that glows different colors depending on the weather.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dunbarj/smart-cloud.git"
+  },
+  "keywords": [
+    "smart",
+    "cloud",
+    "lamp"
+  ],
+  "author": "Jacob Dunbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunbarj/smart-cloud/issues"
+  }
+}
