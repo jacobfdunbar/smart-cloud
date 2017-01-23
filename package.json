@@ -1,0 +1,23 @@
+{
+  "name": "smart-cloud",
+  "version": "1.0.0",
+  "description": "A physical SmartCloud that can use LEDs to display the current weather as well as respond to voice commands such as asking what time it is or asking to play a certain song.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunbarj/smart-cloud.git"
+  },
+  "keywords": [
+    "smart",
+    "cloud"
+  ],
+  "author": "Jacob Dunbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunbarj/smart-cloud/issues"
+  },
+  "homepage": "https://github.com/dunbarj/smart-cloud#readme"
+}
