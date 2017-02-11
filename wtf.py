@@ -54,7 +54,7 @@ elapsedtime = datetime.datetime.now()
 while 1:
 	newtime = datetime.datetime.now()
 	deltatime = newtime - elapsedtime
-	if deltatime > datetime.timedelta(milliseconds=100):
+	if deltatime > datetime.timedelta(milliseconds=200):
 		color = (color + 1) % 6
 		if color == 0:	#red
 			setLights(RED_PIN, 255.0)

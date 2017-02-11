@@ -62,27 +62,32 @@ app.get('/led', function(request, response) {
 			active = 0;
 		}
 		if (mode == 'on' && active == 0) {
-			child = require('child_process').spawn('python', ['fading.py']);
+			var tempmode = currentmode + '.py';
+			child = require('child_process').spawn('python', [tempmode]);
 			childmade = true;
 			active = 1;
 		}
 		else if (mode == 'fading') {
 			child = require('child_process').spawn('python', ['fading.py']);
+			currentmode = 'fading';
 			childmade = true;
 			active = 1;
 		}
-		else if (mode == 'fadeslow') {
+		else if (mode == 'fadingslow') {
 			child = require('child_process').spawn('python', ['fadingslow.py']);
+			currentmode = 'fadingslow';
 			childmade = true;
 			active = 1;
 		}
 		else if (mode == 'rgb') {
 			child = require('child_process').spawn('python', ['rgb.py']);
+			currentmode = 'rgb';
 			childmade = true;
 			active = 1;
 		}
 		else if (mode == 'wtf') {
 			child = require('child_process').spawn('python', ['wtf.py']);
+			currentmode = 'wtf';
 			childmade = true;
 			active = 1;
 		}
@@ -112,5 +117,5 @@ function checkWeather() {
 		clouds = obj.clouds.all;
 	});		
 }
-checkWeather();
-setInterval(checkWeather, 10000);
+//checkWeather();
+//setInterval(checkWeather, 10000);
