@@ -48,13 +48,12 @@ app.get('/ledstatus', function(request, response) {
 
 app.get('/led', function(request, response) {
 	var mode = request.query.mode;
-
+	//console.log(mode);
+	
 	if (childmade && mode != 'on') {
 		child.kill();
 		childmade = false;
 	}
-
-	//console.log(mode);
 
 	if (mode != null) {
 		if (mode == 'off' && active == 1) {
@@ -119,4 +118,4 @@ function checkWeather() {
 	});		
 }
 checkWeather();
-setInterval(checkWeather, 60000); //Check weather once per minute
+setInterval(checkWeather, 600000); //Check weather once per minute
