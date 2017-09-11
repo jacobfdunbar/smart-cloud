@@ -106,7 +106,7 @@ function checkWeather() {
 		if (error) {
 			console.log(error);
 			return;
-		}	
+        }
 		
 		var obj = JSON.parse(body);
 		name = obj.name;
@@ -118,4 +118,4 @@ function checkWeather() {
 	});		
 }
 checkWeather();
-setInterval(checkWeather, 600000); //Check weather once per minute
+setInterval(checkWeather, 30000); //Check weather once per minute
