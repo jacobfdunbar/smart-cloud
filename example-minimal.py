@@ -15,6 +15,7 @@
 import fauxmo
 import logging
 import time
+import os
 
 from debounce_handler import debounce_handler
 
@@ -24,10 +25,17 @@ class device_handler(debounce_handler):
     """Publishes the on/off state requested,
        and the IP address of the Echo making the request.
     """
-    TRIGGERS = {"device": 52000}
+    TRIGGERS = {"penguin": 52000, "cloud": 52001}
 
     def act(self, client_address, state, name):
         print "State", state, "on ", name, "from client @", client_address
+	if name == "cloud":
+		if state:
+			print "Activate Cloud"
+			
+			os.system("sudo node ./index.js")
+		else:
+			print "Deactivate Cloud"
         return True
 
 if __name__ == "__main__":
